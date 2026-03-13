@@ -1,0 +1,23 @@
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <title> Flask calculator</title>
+    </head>
+    <body>
+        <h2>CALCULATOR</h2>
+        <form method="post">
+            <input type="number" name="num1" placeholder="enter first number" required>
+            <input type="number" name="num2" placeholder="enter second number" required>
+            <select name="operation">
+                <option value="add">ADD</option>
+                <option value="subtract">SUBTRACT</option>
+                <option value="multiply">MULTIPLY</option>
+                <option value="divide">DIVIDE</option>
+            </select>
+            <button type="submit">Calculate</button>
+        </form>
+        {% if result is not none %}
+        <h3>Result:{{result}}</h3>
+        {% endif %}
+    </body>
+ </html>
